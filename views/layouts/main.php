@@ -67,10 +67,7 @@ AppAsset::register($this);
         </div>
         </div>
         <div class="col-10">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Exercitationem aut illum consequatur earum praesentium amet, tempora
-          itaque voluptatem hic excepturi, ad officiis quo dolor impedit dolores
-          similique? Officiis, eveniet unde.
+          <?= $content?>
         </div>
       </div>
     </div>
