@@ -5,24 +5,23 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "access".
  *
  * @property int $id
- * @property string $name å§“å
- * @property string $email é‚®ç®±
- * @property int $is_admin æ˜¯å¦æ˜¯è¶…çº§ç®¡ç†å‘˜ 1è¡¨ç¤ºæ˜¯ 0 è¡¨ç¤ºä¸æ˜¯
+ * @property string $title æƒé™åç§°
+ * @property string $urls json æ•°ç»„
  * @property int $status çŠ¶æ€ 1ï¼šæœ‰æ•ˆ 0ï¼šæ— æ•ˆ
  * @property string $updated_time æœ€åŽä¸€æ¬¡æ›´æ–°æ—¶é—´
  * @property string $created_time æ’å…¥æ—¶é—´
  */
-class User extends \yii\db\ActiveRecord
+class Access extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'user';
+        return 'access';
     }
 
     /**
@@ -31,10 +30,10 @@ class User extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['is_admin', 'status'], 'integer'],
+            [['status'], 'integer'],
             [['updated_time', 'created_time'], 'safe'],
-            [['name'], 'string', 'max' => 20],
-            [['email'], 'string', 'max' => 30],
+            [['title'], 'string', 'max' => 50],
+            [['urls'], 'string', 'max' => 1000],
         ];
     }
 
@@ -45,9 +44,8 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'email' => 'Email',
-            'is_admin' => 'Is Admin',
+            'title' => 'Title',
+            'urls' => 'Urls',
             'status' => 'Status',
             'updated_time' => 'Updated Time',
             'created_time' => 'Created Time',
