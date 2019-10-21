@@ -1,0 +1,29 @@
+.navbar-brand {
+  letter-spacing: 3px;
+}
+
+.nav.nav-pills {
+  height: calc(100vh - 100px);
+  background: #f0f0f0;
+}
+.nav .nav-link {
+  color: #666;
+}
+.nav .nav-link.active {
+  background: black;
+  color: white;
+}
+.nav h3 {
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+input,
+btn,
+select,
+.nav-link {
+  border-radius: 0 !important;
+}
